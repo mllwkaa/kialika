@@ -87,6 +87,11 @@ flutter:
     - assets/remove bg/ring-removebg-preview.png
     - assets/welcome.jpg
     - assets/profile.jpg
+    - assets/offer/adv1.JPG
+    - assets/offer/adv2.JPG
+    - assets/offer/adv3.JPG
+    - assets/offer/adv4.JPG
+    - assets/offer/adv5.JPG
 
 
   # The following line ensures that the Material Icons font is

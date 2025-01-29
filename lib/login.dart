@@ -32,7 +32,7 @@ class _loginState extends State<login> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => first()),
+              MaterialPageRoute(builder: (context) => FirstScreen()),
             );
           },
         ),

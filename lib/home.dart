@@ -88,6 +88,20 @@ class _HomeState extends State<Home> {
                 ),
               ),
               const SizedBox(height: 20),
+              // بخش کارت‌های تبلیغاتی
+              Padding(
+                padding: const EdgeInsets.only(bottom: 20.0),
+                child: SizedBox(
+                  height: 150,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 5, // تعداد کارت‌های تبلیغاتی
+                    itemBuilder: (context, index) {
+                      return _buildAdCard(index);
+                    },
+                  ),
+                ),
+              ),
               // بخش محصولات با امتیاز بالا
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -120,7 +134,6 @@ class _HomeState extends State<Home> {
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: highRatedProducts.length > 3 ? 3 : highRatedProducts.length,
-
                   itemBuilder: (context, index) {
                     final product = highRatedProducts[index];
                     return _buildProductCard(product);
@@ -235,6 +248,32 @@ class _HomeState extends State<Home> {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+
+  // ساخت کارت تبلیغاتی با تصویر
+  Widget _buildAdCard(int index) {
+    List<String> adImages = [
+      'assets/offer/adv1.JPG', // تصویر تبلیغاتی 1
+      'assets/offer/adv2.JPG', // تصویر تبلیغاتی 2
+      'assets/offer/adv3.JPG', // تصویر تبلیغاتی 3
+      'assets/offer/adv4.JPG', // تصویر تبلیغاتی 4
+      'assets/offer/adv5.JPG', // تصویر تبلیغاتی 5
+    ];
+
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 8.0),
+      width: 300,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10),
+        child: Image.asset(
+          adImages[index],
+          fit: BoxFit.cover,
         ),
       ),
     );

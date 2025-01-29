@@ -5,7 +5,6 @@ import 'cartprovider.dart'; // وارد کردن CartProvider
 import 'nextshopprovider.dart'; // وارد کردن NextShopProvider
 import 'favoriteprovider.dart'; // وارد کردن FavoriteProvider
 
-
 void main() {
   runApp(
     MultiProvider(
@@ -31,7 +30,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.pinkAccent), // تم رنگی
         useMaterial3: true, // استفاده از متریال دیزاین ۳
       ),
-      home: first(), // صفحه اصلی (ورود/ثبت‌نام)
+      home: FirstScreen(), // صفحه اصلی (ورود/ثبت‌نام)
     );
   }
 }

@@ -68,7 +68,7 @@ class _signupState extends State<signup> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => first()),
+              MaterialPageRoute(builder: (context) => FirstScreen()),
             );
           },
         ),
